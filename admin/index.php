@@ -8,8 +8,8 @@ include("layout/sidebar.php");
 <?php
 $member = mysqli_num_rows(mysqli_query($conn, "SELECT * FROM member "));
 $petugas = mysqli_num_rows(mysqli_query($conn, "SELECT * FROM user "));
-$transaksilunas = mysqli_num_rows(mysqli_query($conn, "SELECT * FROM transaksi WHERE lunas='Lunas'"));
-$transaksibelumlunas = mysqli_num_rows(mysqli_query($conn, "SELECT * FROM transaksi WHERE lunas='Belum Lunas'"));
+$transaksilunas = mysqli_num_rows(mysqli_query($conn, "SELECT * FROM transaksi WHERE status_pembayaran='Lunas'"));
+$transaksibelumlunas = mysqli_num_rows(mysqli_query($conn, "SELECT * FROM transaksi WHERE status_pembayaran='Belum Lunas'"));
 if(empty($jumlah)){
   error_reporting(0);
 }

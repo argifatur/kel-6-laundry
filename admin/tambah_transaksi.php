@@ -57,7 +57,7 @@ if(isset($_POST['add'])) {
 
   <div class="form-group">
       <label>Member :</label>
-      <select required="required" name="member" class="form-control form-control-user" placeholder="Member">
+      <select required="required" name="member" class="js-example-basic-single form-control" placeholder="Member">
        <?php while($sh = mysqli_fetch_array($show2)) { ?>
         <option value="<?= $sh['id_member']; ?>"><?= $sh['nama_member']; ?></option>
     <?php } ?>
@@ -115,6 +115,9 @@ if(isset($_POST['add'])) {
 <?php include 'layout/script.php' ?>
 
 <script>
+  $(document).ready(function() {
+    $('.js-example-basic-single').select2();
+});
     $(document).ready(function(){
         $('#paket').change(function(){
             var id = $(this).val();
