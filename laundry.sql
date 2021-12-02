@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Nov 30, 2021 at 07:09 AM
+-- Generation Time: Dec 02, 2021 at 04:37 AM
 -- Server version: 10.4.13-MariaDB
 -- PHP Version: 7.3.19
 
@@ -39,7 +39,7 @@ CREATE TABLE `detail_transaksi` (
 --
 
 INSERT INTO `detail_transaksi` (`id_detail_transaksi`, `kode_transaksi`, `id_paket`, `qty`) VALUES
-(1, 'TRX001', 6, 1);
+(3, 'TRX001', 6, 2);
 
 -- --------------------------------------------------------
 
@@ -116,16 +116,16 @@ CREATE TABLE `transaksi` (
   `tgl_bayar` date DEFAULT NULL,
   `nilai_laundry` int(11) DEFAULT NULL,
   `dibayar` int(11) DEFAULT NULL,
-  `status` enum('selesai','diambil','proses') DEFAULT NULL,
-  `lunas` enum('lunas','belum lunas') DEFAULT NULL
+  `status_pesanan` enum('selesai','diambil','proses') DEFAULT NULL,
+  `status_pembayaran` enum('lunas','belum lunas') DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 --
 -- Dumping data for table `transaksi`
 --
 
-INSERT INTO `transaksi` (`kode_transaksi`, `id_member`, `id_user`, `tanggal`, `batas_waktu`, `tgl_bayar`, `nilai_laundry`, `dibayar`, `status`, `lunas`) VALUES
-('TRX001', 4, 1, '2021-11-30', '2021-12-10', '0000-00-00', 12000, 0, 'proses', 'lunas');
+INSERT INTO `transaksi` (`kode_transaksi`, `id_member`, `id_user`, `tanggal`, `batas_waktu`, `tgl_bayar`, `nilai_laundry`, `dibayar`, `status_pesanan`, `status_pembayaran`) VALUES
+('TRX001', 4, 1, '2021-12-02', '2021-12-24', '2021-12-02', 24000, 25000, 'diambil', 'lunas');
 
 -- --------------------------------------------------------
 
@@ -203,7 +203,7 @@ ALTER TABLE `user`
 -- AUTO_INCREMENT for table `detail_transaksi`
 --
 ALTER TABLE `detail_transaksi`
-  MODIFY `id_detail_transaksi` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
+  MODIFY `id_detail_transaksi` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
 
 --
 -- AUTO_INCREMENT for table `kategoripaket`
