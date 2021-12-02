@@ -50,10 +50,10 @@ $data = mysqli_fetch_array($sa);
         <!-- <td><?= $s['diskon']; ?></td> -->
         <!-- <td><?= $s['pajak']; ?></td> -->
         <td><?= $s['nilai_laundry']; ?></td>
-        <td><?= $s['lunas']; ?></td>
+        <td><?= $s['status_pembayaran']; ?></td>
         <td>
            <a title="Ubah" href="edit_transaksi.php?id=<?= $s['kode_transaksi']; ?>" class="btn btn-warning"><span class="fas fa-fw fa-pen"></span> Ubah</a> 
-           <a title="Hapus" href="hapus_transaksi.php?id=<?= $s['kode_transaksi']; ?>" onclick="return confirm('Yakin ingin Menghapus Transaksi Dengan Nomor Nota : \n<?php echo $s['nomor_nota'];?>');" class="btn btn-danger"> <span class="fas fa-fw fa-trash"></span> Hapus</a>
+           <a title="Hapus" href="hapus_transaksi.php?id=<?= $s['kode_transaksi']; ?>" onclick="return confirm('Yakin ingin Menghapus Transaksi Dengan Nomor Nota : \n<?php echo $s['kode_transaksi'];?>');" class="btn btn-danger"> <span class="fas fa-fw fa-trash"></span> Hapus</a>
        </td>
    </tr>
 <?php } ?>
