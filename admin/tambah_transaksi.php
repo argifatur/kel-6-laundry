@@ -105,8 +105,8 @@ if(isset($_POST['add'])) {
  <select nam id=""></select>
 
  <div class="right">
-  <a href="transaksi.php" class="btn btn-warning" style="margin-top: 10px;">Kembali</a> 
-  <input type="submit" name="add" value="Tambah Transaksi" class="btn btn-primary btn-user btn-block" style="margin-top: 10px; margin-right: 5px;">
+  <a href="transaksi.php" class="btn btn-warning">Kembali</a> 
+  <input type="submit" name="add" value="Tambah Transaksi" class="btn btn-primary">
 </div>
 
 </form>

@@ -52,8 +52,8 @@ if(isset($_POST['add'])) {
 </div>
 
 <div class="right">
-    <a href="member.php" class="btn btn-warning" style="margin-top: 10px;">Kembali</a>
-    <input type="submit" name="add" value="Edit Member" class="btn btn-primary btn-user btn-block" style="margin-top: 10px; margin-right: 5px;">
+    <a href="member.php" class="btn btn-warning">Kembali</a>
+    <input type="submit" name="add" value="Edit Member" class="btn btn-primary">
 </div>
 
 </form>

@@ -16,6 +16,7 @@ require("../conn.php");
   <title>Admin : <?php echo $title ?></title>
 
   <link rel="stylesheet" href="../assets/css/style.css">
+  <link rel="stylesheet" href="../assets/bootstrap/css/bootstrap.css">
   <link rel="stylesheet" href="../assets/fontawesome/css/all.css">
   <link rel="stylesheet" href="../assets/datatables/datatables.min.css">
 </head>

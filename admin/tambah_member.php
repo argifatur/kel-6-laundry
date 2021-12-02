@@ -29,7 +29,7 @@ if(isset($_POST['add'])) {
 
     <div  class="form-group">
       <label>Nama Member :</label>
-      <input required="required" type="text" name="nama" class="form-control form-control-user" placeholder="Nama Member" autocomplete="off">
+      <input required="required" type="text" name="nama" class="form-control" placeholder="Nama Member" autocomplete="off">
   </div>
   <div  class="form-group">
       <label>Alamat :</label>
@@ -48,8 +48,8 @@ if(isset($_POST['add'])) {
 </div>
 
 <div class="right">
-    <a href="member.php" class="btn btn-warning" style="margin-top: 10px;">Kembali</a>
-    <input type="submit" name="add" value="Tambah Member" class="btn btn-primary btn-user btn-block" style="margin-top: 10px; margin-right: 5px;">
+    <a href="member.php" class="btn btn-warning">Kembali</a>
+    <input type="submit" name="add" value="Tambah Member" class="btn btn-primary">
 </div>
 
 </form>
